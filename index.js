@@ -7,7 +7,8 @@ import { fileURLToPath } from 'url';
 const app = express();
 app.use(cors(
   {
-    origin: "https://client-drab-eight-20.vercel.app"
+    origin: "https://client-drab-eight-20.vercel.app",
+    methods: ["GET", "POST","PUT", "DELETE", "PATCH"],
   }
 ));
 app.use(express.json());

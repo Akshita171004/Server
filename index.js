@@ -5,7 +5,11 @@ import path, { dirname } from 'path';
 import { fileURLToPath } from 'url';
 
 const app = express();
-app.use(cors());
+app.use(cors(
+  {
+    origin: "https://client-drab-eight-20.vercel.app"
+  }
+));
 app.use(express.json());
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
